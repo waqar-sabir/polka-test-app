@@ -1,0 +1,84 @@
+{
+    "data": {
+        "date" : "today",
+        "type" : "all",
+        "leagues" : [
+            {
+                "league_name" : "France - Coupe De La Ligue",
+                "events" : [
+                    {
+                        "event_name" : "End Pens",
+                        "team1" :{
+                            "team_name" : "Monaco",
+                            "score"     : 1
+                        },
+                        "team2" :{
+                            "team_name" : "Rennes",
+                            "score"     : 1
+                        }
+                    },
+                    {
+                        "event_name" : "End",
+                        "team1" :{
+                            "team_name" : "Bordeadux",
+                            "score"     : 1
+                        },
+                        "team2" :{
+                            "team_name" : "Le Havre AC",
+                            "score"     : 0
+                        }
+                    },
+                    {
+                        "event_name" : "End",
+                        "team1" :{
+                            "team_name" : "PSG",
+                            "score"     : 1
+                        },
+                        "team2" :{
+                            "team_name" : "EA Guingamp",
+                            "score"     : 2
+                        }
+                    }
+                ]
+            },
+            {
+                "league_name" : "Afrique de sud - Premier League",
+                "events" : [
+                    {
+                        "event_name" : "End",
+                        "team1" :{
+                            "team_name" : "Bidvest Wits",
+                            "score"     : 0
+                        },
+                        "team2" :{
+                            "team_name" : "Kaizer Chiefs",
+                            "score"     : 2
+                        }
+                    },
+                    {
+                        "event_name" : "End",
+                        "team1" :{
+                            "team_name" : "Maritsburg United",
+                            "score"     : 1
+                        },
+                        "team2" :{
+                            "team_name" : "Free State Stars",
+                            "score"     : 2
+                        }
+                    },
+                    {
+                        "event_name" : "End",
+                        "team1" :{
+                            "team_name" : "PSG",
+                            "score"     : 1
+                        },
+                        "team2" :{
+                            "team_name" : "EA Guingamp",
+                            "score"     : 2
+                        }
+                    }
+                ]
+            }
+        ] 
+    }
+}
