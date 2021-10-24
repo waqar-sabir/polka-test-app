@@ -6,8 +6,8 @@ Vue.use(Vuex);
 export default new Vuex.Store({
   state: {
     score: {},
-    date : 'YESTERDAY',
-    type : 'All'
+    date : 0,
+    type : 0
   },
 
   mutations: {

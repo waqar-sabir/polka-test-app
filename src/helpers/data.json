@@ -1,7 +1,7 @@
 {
     "data": {
-        "date" : "today",
-        "type" : "all",
+        "date" : 1,
+        "type" : 0,
         "leagues" : [
             {
                 "league_name" : "France - Coupe De La Ligue",

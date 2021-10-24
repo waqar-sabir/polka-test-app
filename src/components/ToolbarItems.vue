@@ -1,9 +1,10 @@
 <template>
   <div class="container">
     <v-tabs
-      v-model="tab"
+      v-model="type"
       background-color="#fff"
       color="black"
+      class="toolbar-items"
     >
       <v-tabs-slider color="green"></v-tabs-slider>
       <v-tab
@@ -13,7 +14,7 @@
         {{ item }}
       </v-tab>
     </v-tabs>
-    <v-tabs-items v-model="tab">
+    <v-tabs-items v-model="type">
       <v-tab-item
         v-for="item in items"
         :key="item"
@@ -40,9 +41,28 @@ export default {
 
     data () {
         return {
-          tab: null,
           items: ['All', 'Live', 'Favorites'] 
         }
     },
+
+    computed: {
+      type : {
+        get () {
+          return this.$store.state.type
+        },
+        set (value) {
+          let query = {date: this.$store.state.date , type: value};
+          this.$store.dispatch('changeTab', query);
+        }
+      }
+    }
 };
 </script>
+
+<style scoped>
+  @media only screen and (max-width: 600px) {
+      .toolbar-items {
+        margin-left: 50px !important;
+      }
+  }
+</style>

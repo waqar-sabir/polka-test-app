@@ -17,21 +17,21 @@
 
       <template v-slot:extension>
         <v-tabs
-          v-model="tab"
+          v-model="date"
           align-with-title
+          class="toolbar-tabs"
         >
           <v-tabs-slider color="white"></v-tabs-slider>
           <v-tab
-            v-for="item in items"
-            :key="item"
-            @click="changeTab(item)"
+            v-for="(item, index) in items"
+            :key="index"
           >
             {{ item }}
           </v-tab>
         </v-tabs>
       </template>
     </v-toolbar>
-    <v-tabs-items v-model="tab">
+    <v-tabs-items v-model="date">
       <v-tab-item
         v-for="item in items"
         :key="item"
@@ -56,23 +56,38 @@ export default {
   },
 
   mounted(){
-      let query = {date: 'YESTERDAY' , type: 'All'};
+      let query = {date: 0 , type: 0};
       this.$store.dispatch('changeTab', query);
-  },
-
-  methods: {
-    changeTab(item) {
-        let query = {date: item , type: 'All'};
-        this.$store.dispatch('changeTab', query)
-    }
   },
 
   data () {
     return {
-        tab: null,
         items: ['YESTERDAY', 'TODAY', 'TOMORROW']
     }
   },
+
+  computed: {
+    date : {
+      get () {
+        return this.$store.state.date
+      },
+      set (value) {
+        let query = {date: value , type: this.$store.state.type};
+        this.$store.dispatch('changeTab', query);
+      }
+    }
+  }
 };
 </script>
+
+<style scoped>
+  .toolbar-tabs{
+    margin-left: 35px !important;
+  }
+  @media only screen and (max-width: 600px) {
+      .toolbar-tabs {
+        margin-left: 0px !important;
+      }
+  }
+</style>
 
