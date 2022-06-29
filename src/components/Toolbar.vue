@@ -7,7 +7,7 @@
     >
       <v-app-bar-nav-icon></v-app-bar-nav-icon>
 
-      <v-toolbar-title>Scores</v-toolbar-title>
+      <v-toolbar-title>Score</v-toolbar-title>
 
       <v-spacer></v-spacer>
 
