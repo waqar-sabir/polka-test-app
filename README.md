@@ -1,4 +1,4 @@
-# polka-app
+# polka-test-app
 
 ## Project setup
 ```
